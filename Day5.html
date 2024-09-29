@@ -59,13 +59,18 @@
             greeting = "Good Morning";
 
         }
-        else if (y >= 12 && y < 17) {
+        else if  (y <= 17) {
             greeting = "Good Afternoon";
         }
-        else if (y >= 17 && y < 21) {
+        else if ( y <= 21) {
             greeting = "Good Evening";
 
         }
+        else(y>21) {
+            greeting ="Good Night"
+        }
+        document.getElementById('Togreet').innerHTML = Togreet
+
     </script>
 
 
