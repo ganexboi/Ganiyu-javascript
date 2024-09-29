@@ -48,28 +48,27 @@
     </nav>
 
 
-    <h1 id="Togreet" class="text-center">Good Afternoon</h1>
+    <h1 id="time" class="text-center"></h1>
 
     <script>
-        let y = new Date().getHours();
+        let x = new Date().getHours();
 
-        let greeting;
 
-        if (y >= 4 && y < 12) {
-            greeting = "Good Morning";
+        let greet;
+        if (x >= 1 && x <= 11.59) {
+            greet = 'Good Morning';
+        }
+        else if (x <= 16) {
+            greet = 'Good Afternoon';
+        }
+        else if  ( x <= 20) {
+            greet = 'Good Evening';
+        }
+        else if( x <= 24) {
+            greet = 'Good Night';
+        }
 
-        }
-        else if (y <= 17) {
-            greeting = "Good Afternoon";
-        }
-        else if (y <= 21) {
-            greeting = "Good Evening";
-
-        }
-        else if (y > 21) {
-            greeting = "Good Night"
-        }
-        document.getElementById('Togreet').innerHTML = Togreet;
+        document.getElementById('time').innerHTML = greet;
 
     </script>
 
